@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Loader</string>
+    <plurals name="courses_in_group_sub_title">
+        <item quantity="zero">%1$d курсов</item>
+        <item quantity="one">%1$d курс</item>
+        <item quantity="two">%1$d курса</item>
+        <item quantity="few">%1$d курса</item>
+        <item quantity="many">%1$d курсов</item>
+        <item quantity="other">%1$d курсов</item>
+    </plurals>
+</resources>
