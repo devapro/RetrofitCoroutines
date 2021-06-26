@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import pro.devapp.loader.R
 import pro.devapp.loader.ui.model.CourseGroup
 
-class CourseGroupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class CourseGroupViewHolder(
+    itemView: View,
+    private val onClickListener: OnClickListener
+) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(course: CourseGroup) {
         itemView.apply {
@@ -17,6 +20,9 @@ class CourseGroupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
                     course.totalCourses,
                     course.totalCourses
                 )
+            setOnClickListener {
+                onClickListener.invoke(course)
+            }
         }
     }
 }
